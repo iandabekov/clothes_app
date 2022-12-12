@@ -1,0 +1,16 @@
+{% extends 'clothes_shop/base.html' %}
+{% block title %} <title>{{cloth.name}}</title>{% endblock %}
+
+
+
+
+{% block content %}
+{% for category in categories %}
+    <div>
+    {{ category.name }}
+
+    </div>
+{% endfor %}
+{% endblock content %}
+
+

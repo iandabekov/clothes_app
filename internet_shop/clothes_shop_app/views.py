@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, CreateView, DetailView
 
-from .models import Clothes
+from .models import Clothes, Category
 
 
 # Create your views here.
@@ -19,3 +19,10 @@ class Retrieve_clothes(DetailView):
     model = Clothes
     template_name = 'clothes_shop/retrieve.html'
     context_object_name = 'cloth'
+
+
+class Categories(ListView):
+    model = Category
+    template_name = 'clothes_shop/categories.html'
+    context_object_name = 'categories'
+
